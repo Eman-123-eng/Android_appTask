@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class hotel extends AppCompatActivity {
     private String name;
-
     private String rate;
     private int image_resource_id;
 

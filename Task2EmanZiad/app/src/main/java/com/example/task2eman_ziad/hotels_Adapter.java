@@ -66,7 +66,6 @@ public class hotels_Adapter extends ArrayAdapter<hotel> {
             }
         });
 
-//        System.out.println(position);
 
         return v;
     }

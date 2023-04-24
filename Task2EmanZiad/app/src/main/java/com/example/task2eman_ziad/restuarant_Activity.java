@@ -59,18 +59,6 @@ public class restuarant_Activity extends AppCompatActivity {
         restuarant_Adapter ada = new restuarant_Adapter(this,
                 R.layout.rest_item,items1);
         list2.setAdapter(ada);
-        LayoutInflater inflater = this.getLayoutInflater();
-        LinearLayout v = (LinearLayout)inflater.inflate(R.layout.rest_item,null);
-
-        Button location = (Button) v.findViewById(R.id.restlocation);
-
-
-//        location.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Click(getApplicationContext());
-//            }
-//        });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

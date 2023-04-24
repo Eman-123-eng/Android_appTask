@@ -59,18 +59,7 @@ public class hotel_Activity extends AppCompatActivity {
         hotels_Adapter ada = new hotels_Adapter(this,
                 R.layout.hotel_item,items);
         list2.setAdapter(ada);
-        LayoutInflater inflater = this.getLayoutInflater();
-        LinearLayout v = (LinearLayout)inflater.inflate(R.layout.hotel_item,null);
 
-        Button location = (Button) v.findViewById(R.id.location);
-
-
-//        location.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Click(getApplicationContext());
-//            }
-//        });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

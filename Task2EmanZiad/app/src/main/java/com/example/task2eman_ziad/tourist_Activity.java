@@ -59,18 +59,6 @@ public class tourist_Activity  extends AppCompatActivity {
         tourist_Adapter ada = new tourist_Adapter(this,
                 R.layout.tourist_item,items);
         list2.setAdapter(ada);
-        LayoutInflater inflater = this.getLayoutInflater();
-        LinearLayout v = (LinearLayout)inflater.inflate(R.layout.tourist_item,null);
-
-        Button location = (Button) v.findViewById(R.id.tourlocation);
-
-
-//        location.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Click(getApplicationContext());
-//            }
-//        });
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
