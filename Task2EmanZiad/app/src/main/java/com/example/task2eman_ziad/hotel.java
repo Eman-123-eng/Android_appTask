@@ -1,21 +1,17 @@
 package com.example.task2eman_ziad;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class hotel extends AppCompatActivity {
     private String name;
-    private  String city;
+
     private String rate;
     private int image_resource_id;
 
-    public hotel(int image_resource_id, String name,String city,String rate) {
+    public hotel(int image_resource_id, String name,String rate) {
         this.name = name;
         this.image_resource_id = image_resource_id;
-        this.city=city;
+
         this.rate=rate;
     }
 
@@ -34,13 +30,6 @@ public class hotel extends AppCompatActivity {
         this.image_resource_id = image_resource_id;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
 
     public String getRate() {
         return rate;

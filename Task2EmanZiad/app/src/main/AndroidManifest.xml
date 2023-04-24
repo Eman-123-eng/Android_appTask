@@ -25,6 +25,9 @@
                 android:value="com.example.task2eman_ziad.MainActivity" />
         </activity>
         <activity android:name=".hotel_Activity"/>
+        <activity android:name=".restuarant_Activity"/>
+        <activity android:name=".tourist_Activity"/>
+        <activity android:name=".City"/>
 <!--        <activity android:name=".restuarant_Activity"/>-->
 <!--&lt;!&ndash;        <activity android:name=".tourist_Activity"/>&ndash;&gt;        still to be done !!!! -->
     </application>

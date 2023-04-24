@@ -1,7 +1,5 @@
 package com.example.task2eman_ziad;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
@@ -11,15 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Switch;
-import android.widget.TextView;
 
-import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NavUtils;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class City extends AppCompatActivity {
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -31,12 +27,16 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Welcome !");
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
+        Intent i = getIntent();
+        String name = i.getStringExtra("title");
+        getSupportActionBar().setTitle(name);
+
         ListView list1 = findViewById(R.id.list);
         ArrayList<landmarks> items = new ArrayList<landmarks>();
 
-        items.add(new landmarks(R.drawable.aswan,"Aswan"));
-        items.add(new landmarks(R.drawable.luxor,"Luxor"));
-        items.add(new landmarks(R.drawable.cairo,"Cairo"));
+        items.add(new landmarks(R.drawable.hotels,"Hotels"));
+        items.add(new landmarks(R.drawable.restuarants,"Restuarants"));
+        items.add(new landmarks(R.drawable.tourism,"Tourist Attractions"));
 
         landmarks_Adapter ada = new landmarks_Adapter(this,
                 R.layout.main_list_item,items);
@@ -54,24 +54,27 @@ public class MainActivity extends AppCompatActivity {
                 // ListView Clicked item value
                 switch(itemPosition){
                     case 0:
-                        Intent i = new Intent(MainActivity.this,
-                                City.class);
+                        Intent i = new Intent(City.this,
+                                hotel_Activity.class);
                         String itemname0 = items.get(position).getName();
                         i.putExtra("title",itemname0);
+                        i.putExtra("city",name);
                         startActivity(i);
                         break;
                     case 1:
-                        Intent j = new Intent(MainActivity.this,
-                                City.class);
+                        Intent j = new Intent(City.this,
+                                restuarant_Activity.class);
                         String itemname1 = items.get(position).getName();
                         j.putExtra("title",itemname1);
+                        j.putExtra("city",name);
                         startActivity(j);
                         break;
                     case 2:
-                        Intent y = new Intent(MainActivity.this,
-                                City.class);
+                        Intent y = new Intent(City.this,
+                                tourist_Activity.class);
                         String itemname2 = items.get(position).getName();
                         y.putExtra("title",itemname2);
+                        y.putExtra("city",name);
                         startActivity(y);
                         break;
 

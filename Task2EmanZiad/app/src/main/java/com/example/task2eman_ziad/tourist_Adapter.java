@@ -13,11 +13,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class hotels_Adapter extends ArrayAdapter<hotel> {
+public class tourist_Adapter extends ArrayAdapter<tourist> {
     Context context;
     int resource;
-    ArrayList<hotel> list;
-    public hotels_Adapter(Context context, int resource, ArrayList<hotel>
+    ArrayList<tourist> list;
+    public tourist_Adapter(Context context, int resource, ArrayList<tourist>
             list) {
         super(context, resource, list);
         this.context = context;
@@ -32,17 +32,17 @@ public class hotels_Adapter extends ArrayAdapter<hotel> {
             v = LayoutInflater.from(context).inflate(resource, null,
                     false);
         }
-        TextView name = v.findViewById(R.id.hotel_names);
+        TextView name = v.findViewById(R.id.tour_names);
         name.setText(list.get(position).getName());
-        ImageView image = v.findViewById(R.id.hotel_imgs);
+        ImageView image = v.findViewById(R.id.tour_imgs);
 
         image.setImageResource(list.get(position).getImage_resource_id());
 
 
-        TextView rate = v.findViewById(R.id.rating);
+        TextView rate = v.findViewById(R.id.tourrating);
         rate.setText(list.get(position).getRate());
 
-        Button location = (Button) v.findViewById(R.id.location);
+        Button location = (Button) v.findViewById(R.id.tourlocation);
 
 
         location.setOnClickListener(new View.OnClickListener() {
