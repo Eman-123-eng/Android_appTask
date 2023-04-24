@@ -22,7 +22,6 @@ public class hotel_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hotel_activity);
-//        getSupportActionBar().hide();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#018786")));
 
@@ -37,21 +36,21 @@ public class hotel_Activity extends AppCompatActivity {
 
         if (name.equals("Aswan")){
             items.add(new hotel(R.drawable.philaehotel,
-                    "Philae Hotel AswanOpens in new window","rate: 7.7 Good"));
+                    "Philae Hotel AswanOpens in new window","Good",3.9));
             items.add(new hotel(R.drawable.kanakato,
-                    "Kana Kato ","rate: 9.4 Wonderful"));
-            items.add(new hotel(R.drawable.basmahotel,"Basma Hotel Aswan","rate: 7.7 Good"));
-            items.add(new hotel(R.drawable.movenpickhotel,"Movenpick Resort & Spa","rate: 9.5 Wonderful"));
-            items.add(new hotel(R.drawable.citymax,"Citymax Hotel Aswan","rate: 7.9 Good"));
+                    "Kana Kato ","Wonderful", 4.7));
+            items.add(new hotel(R.drawable.basmahotel,"Basma Hotel Aswan","Good", 3.8));
+            items.add(new hotel(R.drawable.movenpickhotel,"Movenpick Resort & Spa","Wonderful", 4.8));
+            items.add(new hotel(R.drawable.citymax,"Citymax Hotel Aswan","Good", 4.0));
 
         }else if (name.equals("Luxor")){
-            items.add(new hotel(R.drawable.sonestahotel,"Sonesta St. George Hotel","rate: 9.1 Wonderful"));
-            items.add(new hotel(R.drawable.steigenbeirgluxor,"Steigenberger Resort Achti","rate: 9.0 Wonderful"));
-            items.add(new hotel(R.drawable.luxorhotel,"Steigenberger Nile Palace","rate: 9.1 Wonderful"));
+            items.add(new hotel(R.drawable.sonestahotel,"Sonesta St. George Hotel","Wonderful", 4.6));
+            items.add(new hotel(R.drawable.steigenbeirgluxor,"Steigenberger Resort Achti","Wonderful", 4.5));
+            items.add(new hotel(R.drawable.luxorhotel,"Steigenberger Nile Palace","Wonderful", 4.6));
         }else{
-            items.add(new hotel(R.drawable.kempinskicairo,"Kempinski Nile Hotel Cairo","rate: 9.1 Wonderful"));
-            items.add(new hotel(R.drawable.steigenbergcairo,"Steigenberger Hotel El Tahrir","rate: 9.0 Wonderful"));
-            items.add(new hotel(R.drawable.dusitthanihotelcairo,"Dusit Thani LakeView Cairo","rate: 8.4 Very Good"));
+            items.add(new hotel(R.drawable.kempinskicairo,"Kempinski Nile Hotel Cairo","Wonderful", 4.6));
+            items.add(new hotel(R.drawable.steigenbergcairo,"Steigenberger Hotel El Tahrir","Wonderful", 4.5));
+            items.add(new hotel(R.drawable.dusitthanihotelcairo,"Dusit Thani LakeView Cairo","Very Good", 4.2));
 
         }
 

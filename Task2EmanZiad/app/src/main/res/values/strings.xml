@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Task2(Eman-Ziad)</string>
+    <string name="app_name">Tour Guide</string>
+    <string name="splash_text">شركة Tours في شرم والغردقة</string>
+    <string name="splash_tag_text">حمادة السياحة وفلوسي مرتاحة</string>
 </resources>

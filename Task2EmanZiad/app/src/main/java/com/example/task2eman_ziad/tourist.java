@@ -5,12 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 public class tourist extends AppCompatActivity {
     private String name;
     private String rate;
+
+    private double rate_bar;
+
     private int image_resource_id;
 
-    public tourist(int image_resource_id, String name, String rate) {
+    public tourist(int image_resource_id, String name, String rate, double rate_bar) {
         this.name = name;
         this.image_resource_id = image_resource_id;
         this.rate=rate;
+        this.rate_bar = rate_bar;
     }
 
     public String getName() {
@@ -35,5 +39,13 @@ public class tourist extends AppCompatActivity {
 
     public void setRate(String rate) {
         this.rate = rate;
+    }
+
+    public double getRate_bar() {
+        return rate_bar;
+    }
+
+    public void setRate_bar(double rate_bar) {
+        this.rate_bar = rate_bar;
     }
 }

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -38,35 +39,23 @@ public class tourist_Adapter extends ArrayAdapter<tourist> {
 
         image.setImageResource(list.get(position).getImage_resource_id());
 
-
         TextView rate = v.findViewById(R.id.tourrating);
         rate.setText(list.get(position).getRate());
 
-        Button location = (Button) v.findViewById(R.id.tourlocation);
+        RatingBar ratingBar = v.findViewById(R.id.ratingBar);
+        ratingBar.setRating((float)list.get(position).getRate_bar());
 
+        Button location = (Button) v.findViewById(R.id.tourlocation);
 
         location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create a Uri from an intent string. Use the result to create an Intent.
-//                Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
-
-
-// Create an Intent from gmmIntentUri. Set the action to ACTION_VIEW
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?q=loc:"+list.get(position).getName()));
-//                mapIntent.setData(gmmIntentUri);
-// Make the Intent explicit by setting the Google Maps package
                 mapIntent.setPackage("com.google.android.apps.maps");
                 Intent chooser= Intent.createChooser(mapIntent,"string");
-
-// Attempt to start an activity that can handle the Intent
                 context.startActivity(chooser);
-
-
             }
         });
-
-//        System.out.println(position);
 
         return v;
     }

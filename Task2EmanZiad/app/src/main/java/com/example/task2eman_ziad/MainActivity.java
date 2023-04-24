@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 //        getSupportActionBar().hide();
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#018786")));
-        getSupportActionBar().setTitle("Welcome !");
+        getSupportActionBar().setTitle("Tour Guide");
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         ListView list1 = findViewById(R.id.list);
@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
+            // Res§pond to the action bar's Up/Home button
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;

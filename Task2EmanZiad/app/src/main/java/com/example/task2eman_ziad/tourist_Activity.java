@@ -5,10 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,7 +19,6 @@ public class tourist_Activity  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tourist_activity);
-//        getSupportActionBar().hide();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#018786")));
 
@@ -36,23 +32,21 @@ public class tourist_Activity  extends AppCompatActivity {
 
         if (name.equals("Aswan")){
             items.add(new tourist(R.drawable.nub_museum,
-                    "Nubian Museum","rate: 4.6 Wonderful"));
+                    "Nubian Museum","Wonderful", 4.6));
             items.add(new tourist(R.drawable.abu_elhawa,
-                    "Dome of Abu Al-Hawa ","rate: 4.8 Wonderful"));
-            items.add(new tourist(R.drawable.feryal,"Feryal Garden","rate: 4.4 Very Good"));
-            items.add(new tourist(R.drawable.abusimple_temple_aswan,"Abu Simple Temple","rate: 4.4 Very Good"));
-            items.add(new tourist(R.drawable.philae_temple_aswan,"Philae Temple","rate: 4.8 Wonderful"));
+                    "Dome of Abu Al-Hawa ","Wonderful", 4.8));
+            items.add(new tourist(R.drawable.feryal,"Feryal Garden","Very Good", 4.4));
+            items.add(new tourist(R.drawable.abusimple_temple_aswan,"Abu Simple Temple","Very Good", 4.4));
+            items.add(new tourist(R.drawable.philae_temple_aswan,"Philae Temple","Wonderful", 4.8));
 
         }else if (name.equals("Luxor")){
-            items.add(new tourist(R.drawable.sonestahotel,"Sonesta St. George Hotel","rate: 9.1 Wonderful"));
-            items.add(new tourist(R.drawable.steigenbeirgluxor,"Steigenberger Resort Achti","rate: 9.0 Wonderful"));
-            items.add(new tourist(R.drawable.luxorhotel,"Steigenberger Nile Palace","rate: 9.1 Wonderful"));
+            items.add(new tourist(R.drawable.ramses_temple_luxor,"Ramses Tomb","Wonderful", 4.6));
+            items.add(new tourist(R.drawable.karnak_temple_luxor,"Karnak temple","Wonderful", 4.5));
+            items.add(new tourist(R.drawable.hatshepsut_temple_luxor,"Hatshepsut Temple","Wonderful", 4.6));
         }else{
-            items.add(new tourist(R.drawable.fairmonthotel,"Fairmont Nile City","rate: 9.1 Wonderful"));
-            items.add(new tourist(R.drawable.fourseasonshotel,"Four Seasons Hotel ","rate: 9.0 Wonderful"));
-            items.add(new tourist(R.drawable.amphorashotel,"Amphoras Blu","rate: 8.4 Very Good"));
-            items.add(new tourist(R.drawable.movenpickhotel,"Movenpick Taba Resort & Spa","rate: 8.3 Very Good"));
-            items.add(new tourist(R.drawable.luxorhotel,"Steigenberger Nile Palace","rate: 9.1 Wonderful"));
+            items.add(new tourist(R.drawable.mosque_sultanhassan_cairo,"Sultan Hassan Mosque","Wonderful", 4.6));
+            items.add(new tourist(R.drawable.mosque_ibntulun_cairo,"Ibn Tolon Mosque","Wonderful", 4.5));
+            items.add(new tourist(R.drawable.babzewala_cairo,"Bab Zewela","Very Good", 4.2));
         }
 
 
@@ -63,7 +57,6 @@ public class tourist_Activity  extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            // Respond to the action bar's Up/Home button
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;

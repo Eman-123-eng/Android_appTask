@@ -35,7 +35,7 @@ public class City extends AppCompatActivity {
         ArrayList<landmarks> items = new ArrayList<landmarks>();
 
         items.add(new landmarks(R.drawable.hotels,"Hotels"));
-        items.add(new landmarks(R.drawable.restuarants,"Restuarants"));
+        items.add(new landmarks(R.drawable.restuarants,"Restaurants"));
         items.add(new landmarks(R.drawable.tourism,"Tourist Attractions"));
 
         landmarks_Adapter ada = new landmarks_Adapter(this,
@@ -63,7 +63,7 @@ public class City extends AppCompatActivity {
                         break;
                     case 1:
                         Intent j = new Intent(City.this,
-                                restuarant_Activity.class);
+                                restaurant_Activity.class);
                         String itemname1 = items.get(position).getName();
                         j.putExtra("title",itemname1);
                         j.putExtra("city",name);

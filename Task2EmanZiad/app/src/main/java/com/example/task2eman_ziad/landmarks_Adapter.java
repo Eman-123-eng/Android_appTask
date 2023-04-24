@@ -32,8 +32,6 @@ public class landmarks_Adapter extends ArrayAdapter<landmarks> {
 
         image.setImageResource(list.get(position).getImage_resource_id());
 
-//        System.out.println(position);
-
         return v;
     }
 

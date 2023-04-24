@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".restuarant_Activity">
+    tools:context=".restaurant_Activity">
 
     <ImageView
         android:id="@+id/tour_imgs"
@@ -42,6 +42,15 @@
             android:textColor="@color/black"
             android:layout_gravity="left|center"
             />
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin8dp"
+            android:layout_marginTop="@dimen/margin8dp"
+            tools:rating="3.3"
+            tools:stepSize="0.1" />
 
         <Button
             android:id="@+id/tourlocation"

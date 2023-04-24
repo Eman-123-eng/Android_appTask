@@ -6,15 +6,18 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app_logo"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Task2EmanZiad"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="SplashActivity"
+            android:configChanges="orientation"
+            tools:ignore="InnerclassSeparator"
             android:exported="true"
-            android:parentActivityName="com.example.task2eman_ziad.MainActivity" >>
+            android:parentActivityName="com.example.task2eman_ziad.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,11 +27,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.task2eman_ziad.MainActivity" />
         </activity>
+        <activity android:name=".MainActivity"/>
         <activity android:name=".hotel_Activity"/>
-        <activity android:name=".restuarant_Activity"/>
+        <activity android:name=".restaurant_Activity"/>
         <activity android:name=".tourist_Activity"/>
         <activity android:name=".City"/>
-<!--        <activity android:name=".restuarant_Activity"/>-->
+<!--        <activity android:name=".restaurant_Activity"/>-->
 <!--&lt;!&ndash;        <activity android:name=".tourist_Activity"/>&ndash;&gt;        still to be done !!!! -->
     </application>
 

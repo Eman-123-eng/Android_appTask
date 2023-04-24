@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -41,6 +42,9 @@ public class hotels_Adapter extends ArrayAdapter<hotel> {
 
         TextView rate = v.findViewById(R.id.rating);
         rate.setText(list.get(position).getRate());
+
+        RatingBar ratingBar = v.findViewById(R.id.ratingBar);
+        ratingBar.setRating((float)list.get(position).getRate_bar());
 
         Button location = (Button) v.findViewById(R.id.location);
 

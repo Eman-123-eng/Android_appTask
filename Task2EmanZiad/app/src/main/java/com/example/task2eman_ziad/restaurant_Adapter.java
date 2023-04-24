@@ -9,15 +9,16 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class restuarant_Adapter extends ArrayAdapter<restuarant> {
+public class restaurant_Adapter extends ArrayAdapter<restaurant> {
     Context context;
     int resource;
-    ArrayList<restuarant> list;
-    public restuarant_Adapter(Context context, int resource, ArrayList<restuarant>
+    ArrayList<restaurant> list;
+    public restaurant_Adapter(Context context, int resource, ArrayList<restaurant>
             list) {
         super(context, resource, list);
         this.context = context;
@@ -42,31 +43,21 @@ public class restuarant_Adapter extends ArrayAdapter<restuarant> {
         TextView rate = v.findViewById(R.id.restrating);
         rate.setText(list.get(position).getRate());
 
+        RatingBar ratingBar = v.findViewById(R.id.ratingBar);
+        ratingBar.setRating((float)list.get(position).getRate_bar());
+
         Button location = (Button) v.findViewById(R.id.restlocation);
 
 
         location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create a Uri from an intent string. Use the result to create an Intent.
-//                Uri gmmIntentUri = Uri.parse("geo:37.7749,-122.4194");
-
-
-// Create an Intent from gmmIntentUri. Set the action to ACTION_VIEW
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.com/maps?q=loc:"+list.get(position).getName()));
-//                mapIntent.setData(gmmIntentUri);
-// Make the Intent explicit by setting the Google Maps package
                 mapIntent.setPackage("com.google.android.apps.maps");
                 Intent chooser= Intent.createChooser(mapIntent,"string");
-
-// Attempt to start an activity that can handle the Intent
                 context.startActivity(chooser);
-
-
             }
         });
-
-//        System.out.println(position);
 
         return v;
     }
